@@ -11,6 +11,7 @@ class Genre(models.Model):
 class Boardgame(models.Model):
     name = models.CharField(max_length=50)
     genres = models.ManyToManyField(Genre)
+    desc = models.CharField(max_length=250)
 
     def __str__(self):
         return self.name
